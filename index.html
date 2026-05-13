@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio — projects and work by Mauricio Rodriguez"
+    />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">Portfolio</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#tech-stack">Tech stack</a>
+          <a href="#featured">Featured</a>
+          <a href="#all-projects">All projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+          title="Toggle theme"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow" data-profile="tagline">Marketing Technology</p>
+            <h1 id="hero-title" class="hero__title">
+              <span data-profile="name">Mauricio Rodriguez</span>
+            </h1>
+            <p class="hero__lead" data-profile="intro">
+              Building and operating marketing technology systems — automation,
+              integrations, and reliable ops.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#featured">View projects</a>
+              <a class="btn btn--ghost" href="#contact">Contact</a>
+            </div>
+            <ul class="hero__links" data-profile="links" hidden></ul>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__orb"></div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="section section--about"
+        aria-labelledby="about-title"
+      >
+        <div class="container narrow">
+          <h2 id="about-title" class="section__title">About</h2>
+          <div class="prose" data-profile="about"></div>
+        </div>
+      </section>
+
+      <section
+        id="tech-stack"
+        class="section section--stack"
+        aria-labelledby="stack-title"
+      >
+        <div class="container">
+          <div class="section__head">
+            <h2 id="stack-title" class="section__title">Tech stack</h2>
+            <p class="section__subtitle">Tools and platforms</p>
+          </div>
+          <div
+            id="tech-stack-root"
+            class="tech-stack-root"
+            data-profile="tech-stack"
+          ></div>
+        </div>
+      </section>
+
+      <section id="featured" class="section" aria-labelledby="featured-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 id="featured-title" class="section__title">
+              Featured projects
+            </h2>
+            <p class="section__subtitle">
+              Projects I'm proud of and have worked on.
+            </p>
+          </div>
+          <div id="featured-grid" class="card-grid"></div>
+        </div>
+      </section>
+
+      <section
+        id="all-projects"
+        class="section section--repos"
+        aria-labelledby="repos-title"
+      >
+        <div class="container">
+          <div class="section__head">
+            <h2 id="repos-title" class="section__title">
+              All public repositories
+            </h2>
+            <p class="section__subtitle">
+              All public repositories I've worked on.
+            </p>
+          </div>
+          <div class="repos-toolbar">
+            <label class="sr-only" for="repo-search">Search repositories</label>
+            <input
+              id="repo-search"
+              class="repos-search"
+              type="search"
+              placeholder="Search by name or language…"
+              autocomplete="off"
+            />
+            <div class="repos-meta">
+              <span id="repos-count" class="repos-count"></span>
+              <span id="repos-status" class="repos-status" role="status"></span>
+            </div>
+          </div>
+          <div id="repos-list" class="repos-list"></div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="section section--contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container narrow">
+          <h2 id="contact-title" class="section__title">Contact</h2>
+          <p class="contact__text" data-profile="contact"></p>
+          <div class="contact__links" data-profile="contact-links"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p><span data-profile="name-footer"></span> · Portfolio</p>
+        <p class="footer-note">Hosted on GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

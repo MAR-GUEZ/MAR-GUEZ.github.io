@@ -1,0 +1,97 @@
+{
+  "githubUsername": "MAR-GUEZ",
+  "name": "Mauricio Rodriguez",
+  "tagline": "Marketing Technology Expert",
+  "intro": "20-year Technology Leader and former Agency Founder specializing in bridging the gap between high-level business strategy and technical execution. Currently serving as Solutions Architect at Logical Media Group, I work directly with the CEO as the primary liaison between the C-suite and development teams. I focus on architecting scalable digital ecosystems and AI-driven workflows that transform executive vision into high-performance technical reality.",
+  "about": [
+    "My background is defined by a rare combination of entrepreneurial leadership and deep technical expertise. After 13 years as the Founder and CEO of a multidisciplinary technical agency, I developed an \"owner-level\" understanding of how technology must drive ROI and scalability. In my current role at Logical Media Group, I act as the strategic translator—ensuring that business goals are accurately interpreted into robust, future-proof code. Whether I am designing Python-based middleware, optimizing HubSpot environments, or deploying AI solutions, my goal is always to build technical roadmaps that align perfectly with organizational growth.",
+    "This portfolio lists projects and public repositories I work on."
+  ],
+  "contact": "Open to conversations about MarTech, integrations, and technical operations.",
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/MAR-GUEZ"
+    }
+  ],
+  "repoList": {
+    "hideForks": true,
+    "hideArchived": false,
+    "sortBy": "updated",
+    "perPage": 100
+  },
+  "techStack": [
+    {
+      "heading": "AI",
+      "items": [
+        { "label": "Gemini", "icon": "google" },
+        { "label": "Perplexity", "icon": "perplexity" },
+        { "label": "Claude Code", "icon": "anthropic" },
+        { "label": "OpenClaw", "emoji": "🦞" },
+        { "label": "MCP", "fallback": "MCP" }
+      ]
+    },
+    {
+      "heading": "Web",
+      "items": [
+        { "label": "HTML", "icon": "html5" },
+        { "label": "CSS", "icon": "css3" },
+        { "label": "JavaScript", "icon": "javascript" },
+        { "label": "Tailwind CSS", "icon": "tailwindcss" },
+        { "label": "Bootstrap", "icon": "bootstrap" },
+        { "label": "Laravel Blade", "fallback": "Blade" },
+        { "label": "Next.js", "icon": "nextdotjs" },
+        { "label": "Astro", "icon": "astro" }
+      ]
+    },
+    {
+      "heading": "Backend",
+      "items": [
+        { "label": "Python", "icon": "python" },
+        { "label": "FastAPI", "icon": "fastapi" },
+        { "label": "Django", "icon": "django" },
+        { "label": "Flask", "icon": "flask" },
+        { "label": "LangChain", "icon": "langchain" },
+        { "label": "TypeScript", "icon": "typescript" }
+      ]
+    },
+    {
+      "heading": "Data & databases",
+      "items": [
+        { "label": "SQL", "fallback": "SQL" },
+        { "label": "MySQL", "icon": "mysql" },
+        { "label": "PostgreSQL", "icon": "postgresql" },
+        { "label": "BigQuery", "icon": "bigquery" },
+        { "label": "Snowflake", "icon": "snowflake" }
+      ]
+    },
+    {
+      "heading": "CMS, CRM & platforms",
+      "items": [
+        { "label": "WordPress", "icon": "wordpress" },
+        { "label": "HubSpot certified developer", "icon": "hubspot" },
+        { "label": "Perfex CRM", "fallback": "Px" },
+        { "label": "GoHighLevel (GHL)", "fallback": "GHL" },
+        { "label": "Salesforce", "icon": "salesforce" }
+      ]
+    },
+    {
+      "heading": "Productivity & work management",
+      "items": [
+        { "label": "Asana", "icon": "asana" },
+        { "label": "Notion", "icon": "notion" },
+        { "label": "Monday.com", "fallback": "Mo" }
+      ]
+    },
+    {
+      "heading": "Cloud",
+      "items": [
+        {
+          "label": "Google Cloud — Professional Cloud Architect",
+          "icon": "googlecloud"
+        },
+        { "label": "AWS", "icon": "amazonwebservices" }
+      ]
+    }
+  ]
+}
