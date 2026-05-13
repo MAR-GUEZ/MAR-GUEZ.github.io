@@ -28,8 +28,7 @@ function setStoredTheme(theme) {
 
 function initTheme() {
   const stored = getStoredTheme();
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const theme = stored || (prefersDark ? "dark" : "light");
+  const theme = stored === "dark" || stored === "light" ? stored : "light";
   document.documentElement.setAttribute("data-theme", theme);
 
   const btn = document.querySelector(".theme-toggle");
@@ -94,14 +93,15 @@ function applyProfile(profile) {
   }
 
   const contactLinks = document.querySelector('[data-profile="contact-links"]');
-  if (contactLinks) {
-    contactLinks.innerHTML = links
-      .map(
-        (l) =>
-          `<a href="${escapeHtml(l.href)}" rel="noopener noreferrer" target="_blank">${escapeHtml(l.label)}</a>`
-      )
-      .join("");
-  }
+  const footerLinks = document.querySelector('[data-profile="footer-links"]');
+  const linksHtml = links
+    .map(
+      (l) =>
+        `<a href="${escapeHtml(l.href)}" rel="noopener noreferrer" target="_blank">${escapeHtml(l.label)}</a>`
+    )
+    .join("");
+  if (contactLinks) contactLinks.innerHTML = linksHtml;
+  if (footerLinks) footerLinks.innerHTML = linksHtml;
 
   renderTechStack(profile.techStack);
 
@@ -158,16 +158,13 @@ function renderTechStack(techStack) {
             return `
               <div class="tech-tile" title="${title}">
                 <span class="tech-tile__icon-wrap">
-                  <img
-                    class="tech-tile__img"
-                    src="${safeSrc}"
-                    alt=""
-                    width="40"
-                    height="40"
-                    loading="lazy"
-                    decoding="async"
+                  <span
+                    class="tech-tile__icon-gradient"
+                    role="img"
+                    aria-hidden="true"
+                    data-tech-icon-src="${safeSrc}"
                     data-fallback="${dataFallback}"
-                  />
+                  ></span>
                   <span class="tech-tile__glyph tech-tile__glyph--fallback" hidden aria-hidden="true"></span>
                 </span>
                 <span class="tech-tile__label">${escapeHtml(label)}</span>
@@ -198,16 +195,26 @@ function renderTechStack(techStack) {
     })
     .join("");
 
-  root.querySelectorAll(".tech-tile__img").forEach((img) => {
-    const fallbackText = img.getAttribute("data-fallback") || "?";
-    img.addEventListener("error", () => {
-      img.hidden = true;
-      const glyph = img.nextElementSibling;
+  root.querySelectorAll(".tech-tile__icon-gradient").forEach((el) => {
+    const src = el.getAttribute("data-tech-icon-src");
+    const fallbackText = el.getAttribute("data-fallback") || "?";
+    if (!src) return;
+
+    el.style.setProperty("--tech-icon", `url("${src}")`);
+
+    const probe = new Image();
+    probe.decoding = "async";
+    probe.referrerPolicy = "no-referrer";
+    probe.onerror = () => {
+      el.classList.add("tech-tile__icon-gradient--failed");
+      el.style.removeProperty("--tech-icon");
+      const glyph = el.nextElementSibling;
       if (glyph?.classList.contains("tech-tile__glyph--fallback")) {
         glyph.textContent = fallbackText.slice(0, 6);
         glyph.hidden = false;
       }
-    });
+    };
+    probe.src = src;
   });
 }
 
@@ -332,13 +339,18 @@ function renderRepos(repos, container, countEl, dedupeNames) {
         const archived = r.archived ? '<span class="badge badge--muted">Archived</span>' : "";
         const fork = r.fork ? '<span class="badge badge--muted">Fork</span>' : "";
 
+        const metaParts = [lang];
+        if (stars >= 10) metaParts.push(`★ ${stars}`);
+        metaParts.push(`Updated ${escapeHtml(updated)}`);
+        const meta = metaParts.join(" · ");
+
         return `
           <a class="repo-row" href="${escapeHtml(r.html_url)}" rel="noopener noreferrer" target="_blank">
             <div class="repo-row__title">
               ${escapeHtml(r.name)}
               ${archived}${fork}
             </div>
-            <div class="repo-row__meta">${lang} · ★ ${stars} · Updated ${escapeHtml(updated)}</div>
+            <div class="repo-row__meta">${meta}</div>
             ${desc ? `<p class="repo-row__desc">${desc}</p>` : ""}
           </a>
         `;

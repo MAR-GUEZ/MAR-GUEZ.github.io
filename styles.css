@@ -22,8 +22,6 @@
   --accent-soft: rgba(13, 148, 136, 0.12);
   --gradient-start: #0f766e;
   --gradient-end: #4338ca;
-  --hero-orb: radial-gradient(circle at 30% 30%, rgba(13, 148, 136, 0.35), transparent 55%),
-    radial-gradient(circle at 70% 60%, rgba(67, 56, 202, 0.28), transparent 50%);
 }
 
 [data-theme="dark"] {
@@ -38,8 +36,6 @@
   --gradient-end: #818cf8;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.45);
-  --hero-orb: radial-gradient(circle at 30% 30%, rgba(20, 184, 166, 0.25), transparent 55%),
-    radial-gradient(circle at 70% 60%, rgba(129, 140, 248, 0.2), transparent 50%);
 }
 
 *,
@@ -278,9 +274,18 @@ body {
   position: absolute;
   inset: 0;
   border-radius: var(--radius-lg);
-  background: var(--hero-orb);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.hero__portrait {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 18%;
 }
 
 /* Sections */
@@ -419,19 +424,27 @@ body {
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
 }
 
-.tech-tile__img {
+/* Simple Icons as mask + site gradient (same as hero title) */
+.tech-tile__icon-gradient {
   width: 2rem;
   height: 2rem;
-  object-fit: contain;
+  flex-shrink: 0;
   display: block;
-  position: relative;
-  z-index: 1;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-mask-image: var(--tech-icon);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: var(--tech-icon);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
-/*
-  Do not let author `display` override the HTML `hidden` attribute — otherwise the
-  error-state glyph layer stays on top of the logo and reads as a blank/teal square.
-*/
+.tech-tile__icon-gradient--failed {
+  display: none !important;
+}
+
 .tech-tile__glyph.tech-tile__glyph--fallback[hidden] {
   display: none !important;
 }
@@ -728,6 +741,24 @@ a.repo-row:hover {
 
 .footer-inner p {
   margin: 0;
+}
+
+.footer-links {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+}
+
+.footer-links a {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 .sr-only {

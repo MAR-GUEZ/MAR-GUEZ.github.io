@@ -59,7 +59,17 @@
             <ul class="hero__links" data-profile="links" hidden></ul>
           </div>
           <div class="hero__visual" aria-hidden="true">
-            <div class="hero__orb"></div>
+            <div class="hero__orb">
+              <img
+                class="hero__portrait"
+                src="content/assets/Mar-Guez_Profile.png"
+                alt=""
+                width="640"
+                height="640"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -153,9 +163,12 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p><span data-profile="name-footer"></span> · Portfolio</p>
-        <p class="footer-note">Hosted on GitHub Pages</p>
+      <div class="container">
+        <div class="footer-inner">
+          <p><span data-profile="name-footer"></span> · Portfolio</p>
+          <p class="footer-note">Hosted on GitHub Pages</p>
+        </div>
+        <div class="footer-links" data-profile="footer-links"></div>
       </div>
     </footer>
 

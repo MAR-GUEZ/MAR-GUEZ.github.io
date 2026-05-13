@@ -2,13 +2,17 @@
   "githubUsername": "MAR-GUEZ",
   "name": "Mauricio Rodriguez",
   "tagline": "Marketing Technology Expert",
-  "intro": "20-year Technology Leader and former Agency Founder specializing in bridging the gap between high-level business strategy and technical execution. Currently serving as Solutions Architect at Logical Media Group, I work directly with the CEO as the primary liaison between the C-suite and development teams. I focus on architecting scalable digital ecosystems and AI-driven workflows that transform executive vision into high-performance technical reality.",
+  "intro": "20-year Technology Leader and former Agency Founder specializing in bridging the gap between high-level business strategy and technical execution. Currently serving as Solutions Architect at a US-based marketing agency, I work directly with the CEO as the primary liaison between the C-suite and development teams. I focus on architecting scalable digital ecosystems and AI-driven workflows that transform executive vision into high-performance technical reality.",
   "about": [
-    "My background is defined by a rare combination of entrepreneurial leadership and deep technical expertise. After 13 years as the Founder and CEO of a multidisciplinary technical agency, I developed an \"owner-level\" understanding of how technology must drive ROI and scalability. In my current role at Logical Media Group, I act as the strategic translator—ensuring that business goals are accurately interpreted into robust, future-proof code. Whether I am designing Python-based middleware, optimizing HubSpot environments, or deploying AI solutions, my goal is always to build technical roadmaps that align perfectly with organizational growth.",
+    "My background is defined by a rare combination of entrepreneurial leadership and deep technical expertise. After 13 years as the Founder and CEO of a multidisciplinary technical agency, I developed an \"owner-level\" understanding of how technology must drive ROI and scalability. In my current role at a Chicago based marketing agency, I act as the strategic translator—ensuring that business goals are accurately interpreted into robust, future-proof code. Whether I am designing Python-based middleware, optimizing HubSpot environments, or deploying AI solutions, my goal is always to build technical roadmaps that align perfectly with organizational growth.",
     "This portfolio lists projects and public repositories I work on."
   ],
   "contact": "Open to conversations about MarTech, integrations, and technical operations.",
   "links": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/mauricioandresrodriguez/"
+    },
     {
       "label": "GitHub",
       "href": "https://github.com/MAR-GUEZ"
@@ -32,7 +36,24 @@
       ]
     },
     {
-      "heading": "Web",
+      "heading": "Design",
+      "items": [
+        { "label": "Figma", "icon": "figma" },
+        { "label": "Adobe Creative Cloud", "icon": "adobecreativecloud" }
+      ]
+    },
+    {
+      "heading": "CMS, CRM & platforms",
+      "items": [
+        { "label": "WordPress", "icon": "wordpress" },
+        { "label": "HubSpot certified developer", "icon": "hubspot" },
+        { "label": "Perfex CRM", "fallback": "Px" },
+        { "label": "GoHighLevel (GHL)", "fallback": "GHL" },
+        { "label": "Salesforce", "icon": "salesforce" }
+      ]
+    },
+    {
+      "heading": "Web & Frontend",
       "items": [
         { "label": "HTML", "icon": "html5" },
         { "label": "CSS", "icon": "css3" },
@@ -63,16 +84,6 @@
         { "label": "PostgreSQL", "icon": "postgresql" },
         { "label": "BigQuery", "icon": "bigquery" },
         { "label": "Snowflake", "icon": "snowflake" }
-      ]
-    },
-    {
-      "heading": "CMS, CRM & platforms",
-      "items": [
-        { "label": "WordPress", "icon": "wordpress" },
-        { "label": "HubSpot certified developer", "icon": "hubspot" },
-        { "label": "Perfex CRM", "fallback": "Px" },
-        { "label": "GoHighLevel (GHL)", "fallback": "GHL" },
-        { "label": "Salesforce", "icon": "salesforce" }
       ]
     },
     {
