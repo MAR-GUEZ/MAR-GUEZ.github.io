@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio — proyectos y trabajo de Mauricio Rodríguez"
+    />
+    <title>Portafolio</title>
+    <link rel="alternate" hreflang="en" href="../en/" />
+    <link rel="alternate" hreflang="es" href="../es/" />
+    <link rel="alternate" hreflang="x-default" href="../en/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="./">Portafolio</a>
+        <nav class="nav" aria-label="Principal">
+          <a href="#about">Sobre mí</a>
+          <a href="#tech-stack">Stack tecnológico</a>
+          <a href="#featured">Destacados</a>
+          <a href="#all-projects">Todos los proyectos</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+        <div class="header-controls">
+          <div class="lang-switch" role="group" aria-label="Idioma">
+            <a class="lang-switch__btn" href="../en/" hreflang="en" lang="en"
+              >EN</a
+            >
+            <a
+              class="lang-switch__btn is-active"
+              href="./"
+              hreflang="es"
+              lang="es"
+              aria-current="page"
+              >ES</a
+            >
+          </div>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Alternar modo oscuro"
+            title="Cambiar tema"
+          >
+            <span class="theme-toggle__icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow" data-profile="tagline">Marketing Technology</p>
+            <h1 id="hero-title" class="hero__title">
+              <span data-profile="name">Mauricio Rodríguez</span>
+            </h1>
+            <p class="hero__lead" data-profile="intro">
+              Construyendo y operando sistemas de marketing technology —
+              automatización, integraciones y operaciones confiables.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#featured">Ver proyectos</a>
+              <a class="btn btn--ghost" href="#contact">Contacto</a>
+            </div>
+            <ul class="hero__links" data-profile="links" hidden></ul>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__orb">
+              <img
+                class="hero__portrait"
+                src="../content/assets/Mar-Guez_Profile.webp"
+                alt=""
+                width="640"
+                height="640"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="section section--about"
+        aria-labelledby="about-title"
+      >
+        <div class="container narrow">
+          <h2 id="about-title" class="section__title">Sobre mí</h2>
+          <div class="prose" data-profile="about"></div>
+        </div>
+      </section>
+
+      <section
+        id="tech-stack"
+        class="section section--stack"
+        aria-labelledby="stack-title"
+      >
+        <div class="container">
+          <div class="section__head">
+            <h2 id="stack-title" class="section__title">Stack tecnológico</h2>
+            <p class="section__subtitle">Herramientas y plataformas</p>
+          </div>
+          <div
+            id="tech-stack-root"
+            class="tech-stack-root"
+            data-profile="tech-stack"
+          ></div>
+        </div>
+      </section>
+
+      <section id="featured" class="section" aria-labelledby="featured-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 id="featured-title" class="section__title">
+              Proyectos destacados
+            </h2>
+            <p class="section__subtitle">
+              Proyectos de los que estoy orgulloso y en los que he trabajado.
+            </p>
+          </div>
+          <div id="featured-grid" class="card-grid"></div>
+        </div>
+      </section>
+
+      <section
+        id="all-projects"
+        class="section section--repos"
+        aria-labelledby="repos-title"
+      >
+        <div class="container">
+          <div class="section__head">
+            <h2 id="repos-title" class="section__title">
+              Todos los repositorios públicos
+            </h2>
+            <p class="section__subtitle">
+              Todos los repositorios públicos en los que he trabajado.
+            </p>
+          </div>
+          <div class="repos-toolbar">
+            <label class="sr-only" for="repo-search"
+              >Buscar repositorios</label
+            >
+            <input
+              id="repo-search"
+              class="repos-search"
+              type="search"
+              placeholder="Buscar por nombre o lenguaje…"
+              autocomplete="off"
+            />
+            <div class="repos-meta">
+              <span id="repos-count" class="repos-count"></span>
+              <span id="repos-status" class="repos-status" role="status"></span>
+            </div>
+          </div>
+          <div id="repos-list" class="repos-list"></div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="section section--contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container narrow">
+          <h2 id="contact-title" class="section__title">Contacto</h2>
+          <p class="contact__text" data-profile="contact"></p>
+          <div class="contact__links" data-profile="contact-links"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <p>
+            <span data-profile="name-footer"></span> ·
+            <span data-i18n="footerPortfolio">Portafolio</span>
+          </p>
+          <p class="footer-note">Alojado en GitHub Pages</p>
+        </div>
+        <div class="footer-links" data-profile="footer-links"></div>
+      </div>
+    </footer>
+
+    <script src="../app.js" type="module"></script>
+  </body>
+</html>

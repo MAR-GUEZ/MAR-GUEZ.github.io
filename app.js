@@ -1,14 +1,32 @@
 /**
- * Portfolio app — loads profile + featured JSON, fetches public repos from GitHub API.
- * Configure your username in content/profile.json (githubUsername).
+ * Portfolio app — loads locale profile + featured JSON, fetches public repos from GitHub API.
+ * Locales live under /en/ and /es/; content under content/{locale}/.
  */
 
-const CONFIG = {
-  profilePath: "content/profile.json",
-  featuredPath: "content/featured-projects.json",
-};
-
+const LANG_KEY = "portfolio-lang";
 const THEME_KEY = "portfolio-theme";
+
+const DATE_LOCALES = { en: "en-US", es: "es-ES" };
+
+/** @type {Record<string, string> | null} */
+let ui = null;
+let locale = "en";
+
+function detectLocale() {
+  const path = location.pathname;
+  const match = path.match(/\/(en|es)(?:\/(?:index\.html)?)?$/);
+  return match ? match[1] : "en";
+}
+
+function t(key, vars) {
+  let str = (ui && ui[key]) || key;
+  if (vars) {
+    for (const [k, v] of Object.entries(vars)) {
+      str = str.replaceAll(`{${k}}`, String(v));
+    }
+  }
+  return str;
+}
 
 function getStoredTheme() {
   try {
@@ -26,6 +44,14 @@ function setStoredTheme(theme) {
   }
 }
 
+function setStoredLang(lang) {
+  try {
+    localStorage.setItem(LANG_KEY, lang);
+  } catch {
+    /* ignore */
+  }
+}
+
 function initTheme() {
   const stored = getStoredTheme();
   const theme = stored === "dark" || stored === "light" ? stored : "light";
@@ -34,9 +60,24 @@ function initTheme() {
   const btn = document.querySelector(".theme-toggle");
   if (!btn) return;
   btn.addEventListener("click", () => {
-    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    const next =
+      document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     setStoredTheme(next);
+  });
+}
+
+function initLangSwitch(currentLocale) {
+  setStoredLang(currentLocale);
+
+  document.querySelectorAll(".lang-switch a").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const hash = location.hash || "";
+      if (!hash) return;
+      e.preventDefault();
+      const href = a.getAttribute("href") || "./";
+      location.href = href.endsWith("/") || href.endsWith("html") ? href + hash : href + "/" + hash;
+    });
   });
 }
 
@@ -64,7 +105,7 @@ function applyProfile(profile) {
   setText('[data-profile="tagline"]', profile.tagline);
   setText('[data-profile="intro"]', profile.intro);
   setText('[data-profile="name-footer"]', profile.name);
-  document.title = `${profile.name || "Portfolio"} — Portfolio`;
+  document.title = `${profile.name || t("titleSuffix")} — ${t("titleSuffix")}`;
 
   const aboutEl = document.querySelector('[data-profile="about"]');
   if (aboutEl && Array.isArray(profile.about)) {
@@ -124,7 +165,7 @@ function renderTechStack(techStack) {
 
   const groups = Array.isArray(techStack) ? techStack : [];
   if (!groups.length) {
-    root.innerHTML = `<p class="section__subtitle">Add a <code>techStack</code> array to <code>content/profile.json</code> to show tools here.</p>`;
+    root.innerHTML = `<p class="section__subtitle">${escapeHtml(t("emptyTechStack"))}</p>`;
     return;
   }
 
@@ -228,33 +269,38 @@ function renderFeatured(projects) {
     .map((p) => {
       const access = validAccess.has(p.repoAccess) ? p.repoAccess : "none";
       const badges = [];
-      if (access === "private") badges.push('<span class="badge">Private repository</span>');
-      if (access === "none") badges.push('<span class="badge badge--muted">No public repo</span>');
+      if (access === "private") badges.push(`<span class="badge">${escapeHtml(t("badgePrivate"))}</span>`);
+      if (access === "none")
+        badges.push(`<span class="badge badge--muted">${escapeHtml(t("badgeNoRepo"))}</span>`);
 
       const tech = (p.tech || [])
-        .map((t) => `<li><span class="tech-pill">${escapeHtml(t)}</span></li>`)
+        .map((item) => `<li><span class="tech-pill">${escapeHtml(item)}</span></li>`)
         .join("");
 
       const actions = [];
       if (access === "public" && p.repoUrl) {
-        actions.push(`<a href="${escapeHtml(p.repoUrl)}" rel="noopener noreferrer" target="_blank">Repository</a>`);
+        actions.push(
+          `<a href="${escapeHtml(p.repoUrl)}" rel="noopener noreferrer" target="_blank">${escapeHtml(t("linkRepository"))}</a>`
+        );
       }
       if (p.demoUrl) {
         const demoLabel =
-          typeof p.demoLabel === "string" && p.demoLabel.trim() ? p.demoLabel.trim() : "Live demo";
+          typeof p.demoLabel === "string" && p.demoLabel.trim()
+            ? p.demoLabel.trim()
+            : t("linkLiveDemo");
         actions.push(
           `<a href="${escapeHtml(p.demoUrl)}" rel="noopener noreferrer" target="_blank">${escapeHtml(demoLabel)}</a>`
         );
       }
       if (p.caseStudyUrl) {
         actions.push(
-          `<a href="${escapeHtml(p.caseStudyUrl)}" rel="noopener noreferrer" target="_blank">Case study</a>`
+          `<a href="${escapeHtml(p.caseStudyUrl)}" rel="noopener noreferrer" target="_blank">${escapeHtml(t("linkCaseStudy"))}</a>`
         );
       }
 
       const roleText = typeof p.role === "string" ? p.role.trim() : "";
       const roleBlock = roleText
-        ? `<p class="card__role"><span class="card__role-label">Role</span> ${escapeHtml(roleText)}</p>`
+        ? `<p class="card__role"><span class="card__role-label">${escapeHtml(t("roleLabel"))}</span> ${escapeHtml(roleText)}</p>`
         : "";
 
       return `
@@ -263,7 +309,7 @@ function renderFeatured(projects) {
             <span class="card__accent" aria-hidden="true">${escapeHtml(p.accent || "·")}</span>
             <div class="card__badges">${badges.join("")}</div>
           </div>
-          <h3 class="card__title">${escapeHtml(p.title || "Untitled")}</h3>
+          <h3 class="card__title">${escapeHtml(p.title || t("untitled"))}</h3>
           ${roleBlock}
           <p class="card__summary">${escapeHtml(p.summary || "")}</p>
           ${tech ? `<ul class="card__tech">${tech}</ul>` : ""}
@@ -272,11 +318,6 @@ function renderFeatured(projects) {
       `;
     })
     .join("");
-}
-
-function normalizeRepoName(githubRepo) {
-  if (!githubRepo || typeof githubRepo !== "string") return null;
-  return githubRepo.trim().toLowerCase();
 }
 
 async function fetchAllPublicRepos(username, perPage = 100) {
@@ -313,10 +354,25 @@ function filterRepos(repos, options) {
 function formatDate(iso) {
   if (!iso) return "";
   try {
-    return new Date(iso).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+    return new Date(iso).toLocaleDateString(DATE_LOCALES[locale] || locale, {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
   } catch {
     return iso;
   }
+}
+
+function repoCountLabel(n) {
+  if (n === 0) return t("repoCountZero");
+  if (n === 1) return t("repoCountOne");
+  return t("repoCountMany", { n });
+}
+
+function matchCountLabel(n) {
+  if (n === 1) return t("matchOne");
+  return t("matchMany", { n });
 }
 
 function renderRepos(repos, container, countEl, dedupeNames) {
@@ -326,8 +382,8 @@ function renderRepos(repos, container, countEl, dedupeNames) {
 
   const renderList = (list) => {
     if (!list.length) {
-      container.innerHTML = `<p class="section__subtitle">No repositories match your filters or search.</p>`;
-      if (countEl) countEl.textContent = "0 repositories";
+      container.innerHTML = `<p class="section__subtitle">${escapeHtml(t("noRepoMatch"))}</p>`;
+      if (countEl) countEl.textContent = t("repoCountZero");
       return;
     }
     container.innerHTML = list
@@ -336,12 +392,16 @@ function renderRepos(repos, container, countEl, dedupeNames) {
         const lang = r.language ? escapeHtml(r.language) : "—";
         const stars = r.stargazers_count ?? 0;
         const updated = formatDate(r.pushed_at || r.updated_at);
-        const archived = r.archived ? '<span class="badge badge--muted">Archived</span>' : "";
-        const fork = r.fork ? '<span class="badge badge--muted">Fork</span>' : "";
+        const archived = r.archived
+          ? `<span class="badge badge--muted">${escapeHtml(t("badgeArchived"))}</span>`
+          : "";
+        const fork = r.fork
+          ? `<span class="badge badge--muted">${escapeHtml(t("badgeFork"))}</span>`
+          : "";
 
         const metaParts = [lang];
         if (stars >= 10) metaParts.push(`★ ${stars}`);
-        metaParts.push(`Updated ${escapeHtml(updated)}`);
+        metaParts.push(escapeHtml(t("updated", { date: updated })));
         const meta = metaParts.join(" · ");
 
         return `
@@ -356,7 +416,7 @@ function renderRepos(repos, container, countEl, dedupeNames) {
         `;
       })
       .join("");
-    if (countEl) countEl.textContent = `${list.length} ${list.length === 1 ? "repository" : "repositories"}`;
+    if (countEl) countEl.textContent = repoCountLabel(list.length);
   };
 
   renderList(visible);
@@ -377,25 +437,39 @@ function renderRepos(repos, container, countEl, dedupeNames) {
       return name.includes(q) || lang.includes(q) || desc.includes(q);
     });
     renderList(filtered);
-    if (countEl) {
-      countEl.textContent = `${filtered.length} match${filtered.length === 1 ? "" : "es"}`;
-    }
+    if (countEl) countEl.textContent = matchCountLabel(filtered.length);
   };
 
   search.addEventListener("input", runSearch);
 }
 
 async function main() {
+  locale = detectLocale();
+  document.documentElement.lang = locale;
+
   initTheme();
+  initLangSwitch(locale);
+
+  // Resolved against the locale page URL (/en/ or /es/)
+  const profilePath = `../content/${locale}/profile.json`;
+  const featuredPath = `../content/${locale}/featured-projects.json`;
+  const uiPath = `../content/${locale}/ui.json`;
+
+  try {
+    ui = await fetchJson(uiPath);
+  } catch (e) {
+    console.warn("UI strings:", e);
+    ui = {};
+  }
 
   let profile;
   try {
-    profile = await fetchJson(CONFIG.profilePath);
+    profile = await fetchJson(profilePath);
   } catch (e) {
     console.error(e);
     const st = document.getElementById("repos-status");
     st?.classList.add("repos-status--error");
-    if (st) st.textContent = "Could not load profile.json.";
+    if (st) st.textContent = t("profileLoadError");
     return;
   }
 
@@ -407,7 +481,7 @@ async function main() {
 
   let featured = [];
   try {
-    featured = await fetchJson(CONFIG.featuredPath);
+    featured = await fetchJson(featuredPath);
     if (!Array.isArray(featured)) featured = [];
   } catch (e) {
     console.warn("Featured projects:", e);
@@ -422,17 +496,14 @@ async function main() {
   const listEl = document.getElementById("repos-list");
 
   if (!username || username === "YOUR_GITHUB_USERNAME") {
-    if (statusEl) {
-      statusEl.textContent =
-        "Set githubUsername in content/profile.json to load your public repositories.";
-    }
+    if (statusEl) statusEl.textContent = t("setUsername");
     if (listEl) {
-      listEl.innerHTML = `<p class="section__subtitle">After you set your GitHub username, reload this page.</p>`;
+      listEl.innerHTML = `<p class="section__subtitle">${escapeHtml(t("setUsernameHint"))}</p>`;
     }
     return;
   }
 
-  if (statusEl) statusEl.textContent = "Loading repositories…";
+  if (statusEl) statusEl.textContent = t("loadingRepos");
 
   try {
     const raw = await fetchAllPublicRepos(username, perPage);
@@ -448,14 +519,13 @@ async function main() {
     if (statusEl) {
       statusEl.classList.add("repos-status--error");
       if (e.message === "rate_limited") {
-        statusEl.textContent =
-          "GitHub API rate limit reached. Try again in a few minutes, or open this site from a local preview.";
+        statusEl.textContent = t("rateLimited");
       } else {
-        statusEl.textContent = "Could not load repositories. Check the username and your connection.";
+        statusEl.textContent = t("reposLoadError");
       }
     }
     if (listEl) {
-      listEl.innerHTML = `<p class="section__subtitle">You can still browse featured projects above.</p>`;
+      listEl.innerHTML = `<p class="section__subtitle">${escapeHtml(t("reposFallback"))}</p>`;
     }
   }
 }

@@ -1,0 +1,108 @@
+{
+  "githubUsername": "MAR-GUEZ",
+  "name": "Mauricio Rodríguez",
+  "tagline": "Experto en Marketing Technology",
+  "intro": "Líder tecnológico con 20 años de experiencia y exfundador de agencia, especializado en unir la estrategia de negocio de alto nivel con la ejecución técnica. Actualmente me desempeño como Solutions Architect en una agencia de marketing con sede en EE. UU., trabajando directamente con el CEO como enlace principal entre la alta dirección y los equipos de desarrollo. Me enfoco en arquitecturar ecosistemas digitales escalables y flujos impulsados por IA que convierten la visión ejecutiva en realidad técnica de alto rendimiento.",
+  "about": [
+    "Mi trayectoria se define por una combinación poco común de liderazgo emprendedor y profundidad técnica. Tras 13 años como fundador y CEO de una agencia técnica multidisciplinaria, desarrollé una comprensión a nivel de dueño de cómo la tecnología debe impulsar el ROI y la escalabilidad. En mi rol actual en una agencia de marketing con sede en Chicago, actúo como traductor estratégico: aseguro que los objetivos de negocio se interpreten con precisión en código sólido y a prueba de futuro. Ya sea diseñando middleware en Python, optimizando entornos HubSpot o desplegando soluciones de IA, mi meta siempre es construir roadmaps técnicos alineados con el crecimiento de la organización.",
+    "Este portafolio lista proyectos y repositorios públicos en los que trabajo."
+  ],
+  "contact": "Abierto a conversaciones sobre MarTech, integraciones y operaciones técnicas. Y si te gusta el blues, toco en vivo todos los viernes por la noche en el pub local. ¡Me encantaría verte ahí!",
+  "links": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/mauricioandresrodriguez/"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/MAR-GUEZ"
+    }
+  ],
+  "repoList": {
+    "hideForks": true,
+    "hideArchived": false,
+    "sortBy": "updated",
+    "perPage": 100
+  },
+  "techStack": [
+    {
+      "heading": "IA",
+      "items": [
+        { "label": "Gemini", "icon": "google" },
+        { "label": "Perplexity", "icon": "perplexity" },
+        { "label": "Claude Code", "icon": "anthropic" },
+        { "label": "OpenClaw", "emoji": "🦞" },
+        { "label": "MCP", "fallback": "MCP" }
+      ]
+    },
+    {
+      "heading": "Diseño",
+      "items": [
+        { "label": "Figma", "icon": "figma" },
+        { "label": "Adobe Creative Cloud", "icon": "adobecreativecloud" }
+      ]
+    },
+    {
+      "heading": "CMS, CRM y plataformas",
+      "items": [
+        { "label": "WordPress", "icon": "wordpress" },
+        { "label": "Desarrollador certificado HubSpot", "icon": "hubspot" },
+        { "label": "Perfex CRM", "fallback": "Px" },
+        { "label": "GoHighLevel (GHL)", "fallback": "GHL" },
+        { "label": "Salesforce", "icon": "salesforce" }
+      ]
+    },
+    {
+      "heading": "Web y frontend",
+      "items": [
+        { "label": "HTML", "icon": "html5" },
+        { "label": "CSS", "icon": "css3" },
+        { "label": "JavaScript", "icon": "javascript" },
+        { "label": "Tailwind CSS", "icon": "tailwindcss" },
+        { "label": "Bootstrap", "icon": "bootstrap" },
+        { "label": "Laravel Blade", "fallback": "Blade" },
+        { "label": "Next.js", "icon": "nextdotjs" },
+        { "label": "Astro", "icon": "astro" }
+      ]
+    },
+    {
+      "heading": "Backend",
+      "items": [
+        { "label": "Python", "icon": "python" },
+        { "label": "FastAPI", "icon": "fastapi" },
+        { "label": "Django", "icon": "django" },
+        { "label": "Flask", "icon": "flask" },
+        { "label": "LangChain", "icon": "langchain" },
+        { "label": "TypeScript", "icon": "typescript" }
+      ]
+    },
+    {
+      "heading": "Datos y bases de datos",
+      "items": [
+        { "label": "SQL", "fallback": "SQL" },
+        { "label": "MySQL", "icon": "mysql" },
+        { "label": "PostgreSQL", "icon": "postgresql" },
+        { "label": "BigQuery", "icon": "bigquery" },
+        { "label": "Snowflake", "icon": "snowflake" }
+      ]
+    },
+    {
+      "heading": "Productividad y gestión",
+      "items": [
+        { "label": "Asana", "icon": "asana" },
+        { "label": "Notion", "icon": "notion" },
+        { "label": "Monday.com", "fallback": "Mo" }
+      ]
+    },
+    {
+      "heading": "Nube",
+      "items": [
+        {
+          "label": "Google Cloud — Arquitecto profesional de la nube",
+          "icon": "googlecloud"
+        },
+        { "label": "AWS", "icon": "amazonwebservices" }
+      ]
+    }
+  ]
+}

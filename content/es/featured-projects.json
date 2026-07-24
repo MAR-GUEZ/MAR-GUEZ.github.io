@@ -1,0 +1,140 @@
+[
+  {
+    "id": "sage",
+    "title": "Asistente de IA SAGE",
+    "role": "Arquitecto principal — arquitectura y diseño UX/UI",
+    "summary": "SAGE es un analista de marketing con IA que ayuda con estrategia de marketing, creación de contenido y más.",
+    "tech": [
+      "Python",
+      "FastAPI",
+      "Gemini",
+      "Anthropic",
+      "LangChain",
+      "MCP",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "accent": "🤖",
+    "repoAccess": "private",
+    "repoUrl": "https://github.com/logicalmediagroup/SAGE-AI-Assistant",
+    "githubRepo": "logicalmediagroup/SAGE-AI-Assistant"
+  },
+  {
+    "id": "SportCourt-Website",
+    "title": "Sitios web SportCourt",
+    "role": "Desarrollo de tema, diseño de campos ACF y soporte de despliegue para sitios de partners",
+    "summary": "Tema de WordPress para sitios de partners de SportCourt, implementado en más de 50 partners en todo el mundo.",
+    "tech": ["WordPress", "ACF Pro", "PHP"],
+    "accent": "🏀",
+    "repoAccess": "private",
+    "repoUrl": "https://github.com/logicalmediagroup/Sportcourt-Partner-Theme",
+    "githubRepo": "logicalmediagroup/Sportcourt-Partner-Theme",
+    "demoUrl": "https://sportcourt.com",
+    "demoLabel": "Sitio en vivo"
+  },
+  {
+    "id": "tricocci-server-side-tracking",
+    "title": "Tracking server-side Tricocci Shopify/Zenoti",
+    "role": "Arquitecto principal",
+    "summary": "Liderazgo de un equipo que desarrolla una solución personalizada en Azure para enriquecer datos de tracking con medición server-side en múltiples puntos de conversión en Shopify y Zenoti.",
+    "tech": [
+      "Azure",
+      "Shopify",
+      "Zenoti",
+      "Server-Side Tracking",
+      "TypeScript"
+    ],
+    "accent": "📊",
+    "repoAccess": "private",
+    "demoUrl": "https://tricocci.com",
+    "demoLabel": "Sitio en vivo"
+  },
+  {
+    "id": "hilco-real-estate-sales",
+    "title": "Hilco Real Estate Sales",
+    "role": "Líder de migración",
+    "summary": "Gestión de una migración compleja desde un CMS a medida hacia una solución mixta WordPress-Buildout con reverse proxy, asegurando mínimo downtime y una transición fluida.",
+    "tech": ["WordPress", "Buildout", "Reverse Proxy", "CMS Migration"],
+    "accent": "🏠",
+    "repoAccess": "private"
+  },
+  {
+    "id": "fastwyre-api-middleware",
+    "title": "Sincronización CRM-HubSpot Fastwyre",
+    "role": "Desarrollador único",
+    "summary": "Construcción de un middleware API personalizado para sincronizar datos entre Crowdfiber CRM y HubSpot, agilizando flujos de leads y clientes.",
+    "tech": ["API", "HubSpot", "Crowdfiber", "CRM", "Middleware"],
+    "accent": "🔗",
+    "repoAccess": "private"
+  },
+  {
+    "id": "kipling-clark-website",
+    "title": "Rebuild del sitio Kipling & Clark",
+    "role": "Líder del equipo de desarrollo",
+    "summary": "Liderazgo del equipo de desarrollo en el rebuild del sitio con ACF, Bootstrap y un tema personalizado de WordPress.",
+    "tech": ["WordPress", "ACF", "Bootstrap", "PHP"],
+    "accent": "🏗️",
+    "repoAccess": "private",
+    "demoUrl": "https://kiplingandclark.com/",
+    "demoLabel": "Sitio en vivo"
+  },
+  {
+    "id": "bigquery-datalake-setup",
+    "title": "Configuración BigQuery y Data Lake",
+    "role": "Desarrollador principal",
+    "summary": "Automatización de actualizaciones de la plataforma BigQuery mediante APIs que facilitan la transferencia de datos desde Google Ads, Google Analytics, Google Search Console y Harvest.",
+    "tech": [
+      "BigQuery",
+      "Google Ads API",
+      "Google Analytics",
+      "GSC",
+      "Harvest",
+      "Python"
+    ],
+    "accent": "🗄️",
+    "repoAccess": "private"
+  },
+  {
+    "id": "harry",
+    "title": "Asistente de IA Harry",
+    "role": "Desarrollador principal",
+    "summary": "Harry es un asistente de IA que ayuda con consultas de RR. HH. y más.",
+    "tech": [
+      "Python",
+      "Gemini",
+      "LangChain",
+      "RAG",
+      "Google Chat API",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+      "GitHub Actions CI/CD"
+    ],
+    "accent": "🐶",
+    "repoAccess": "private",
+    "repoUrl": "https://github.com/logicalmediagroup/Harry-AI-Assistant",
+    "githubRepo": "logicalmediagroup/Harry-AI-Assistant"
+  },
+  {
+    "id": "hubspot-utm-form-tracking",
+    "title": "Tracking UTM de formularios HubSpot",
+    "role": "Desarrollador único",
+    "summary": "Una librería ligera de JavaScript para capturar parámetros UTM y atribución de formularios de HubSpot.",
+    "tech": ["JavaScript", "HubSpot", "Marketing", "Forms"],
+    "accent": "📝",
+    "repoAccess": "public",
+    "repoUrl": "https://github.com/MAR-GUEZ/hubspot-utm-form-tracking",
+    "githubRepo": "MAR-GUEZ/hubspot-utm-form-tracking"
+  },
+  {
+    "id": "zigru",
+    "title": "Zigru",
+    "role": "Arquitecto y desarrollador principal",
+    "summary": "Una plataforma ERP SaaS para artistas, con herramientas de negocio y gestión.",
+    "tech": ["Django", "Next.js", "GCP", "Payment Gateways"],
+    "accent": "🎨",
+    "repoAccess": "private",
+    "demoUrl": "https://zigru.com",
+    "demoLabel": "Sitio en vivo"
+  }
+]
