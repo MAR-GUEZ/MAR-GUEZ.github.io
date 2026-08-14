@@ -1,4 +1,4 @@
-# Mauricio Rodriguez — Marketing Technology Administrator
+# Mauricio Rodriguez — Director of Technology Solutions at Logical Media Group (Chicago)
 
 Portfolio and project hub: see the live site (GitHub Pages) and [`README.md`](README.md) for how to add projects.
 
