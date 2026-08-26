@@ -3,7 +3,7 @@
     "id": "sage",
     "title": "Asistente de IA SAGE",
     "role": "Arquitecto principal — arquitectura y diseño UX/UI",
-    "summary": "SAGE es un analista de marketing con IA que ayuda con estrategia de marketing, creación de contenido y más.",
+    "summary": "SAGE es un analista de marketing con IA que ayuda con estrategia de marketing, creación de contenido y más, impulsado por la fuente central de verdad de la compañía, parte de una transformación de IA a nivel organizacional.",
     "tech": [
       "Python",
       "FastAPI",
@@ -24,7 +24,11 @@
     "title": "Sitios web SportCourt",
     "role": "Desarrollo de tema, diseño de campos ACF y soporte de despliegue para sitios de partners",
     "summary": "Tema de WordPress para sitios de partners de SportCourt, implementado en más de 50 partners en todo el mundo.",
-    "tech": ["WordPress", "ACF Pro", "PHP"],
+    "tech": [
+      "WordPress",
+      "ACF Pro",
+      "PHP"
+    ],
     "accent": "🏀",
     "repoAccess": "private",
     "repoUrl": "https://github.com/logicalmediagroup/Sportcourt-Partner-Theme",
@@ -54,7 +58,12 @@
     "title": "Hilco Real Estate Sales",
     "role": "Líder de migración",
     "summary": "Gestión de una migración compleja desde un CMS a medida hacia una solución mixta WordPress-Buildout con reverse proxy, asegurando mínimo downtime y una transición fluida.",
-    "tech": ["WordPress", "Buildout", "Reverse Proxy", "CMS Migration"],
+    "tech": [
+      "WordPress",
+      "Buildout",
+      "Reverse Proxy",
+      "CMS Migration"
+    ],
     "accent": "🏠",
     "repoAccess": "private"
   },
@@ -63,7 +72,13 @@
     "title": "Sincronización CRM-HubSpot Fastwyre",
     "role": "Desarrollador único",
     "summary": "Construcción de un middleware API personalizado para sincronizar datos entre Crowdfiber CRM y HubSpot, agilizando flujos de leads y clientes.",
-    "tech": ["API", "HubSpot", "Crowdfiber", "CRM", "Middleware"],
+    "tech": [
+      "API",
+      "HubSpot",
+      "Crowdfiber",
+      "CRM",
+      "Middleware"
+    ],
     "accent": "🔗",
     "repoAccess": "private"
   },
@@ -72,7 +87,12 @@
     "title": "Rebuild del sitio Kipling & Clark",
     "role": "Líder del equipo de desarrollo",
     "summary": "Liderazgo del equipo de desarrollo en el rebuild del sitio con ACF, Bootstrap y un tema personalizado de WordPress.",
-    "tech": ["WordPress", "ACF", "Bootstrap", "PHP"],
+    "tech": [
+      "WordPress",
+      "ACF",
+      "Bootstrap",
+      "PHP"
+    ],
     "accent": "🏗️",
     "repoAccess": "private",
     "demoUrl": "https://kiplingandclark.com/",
@@ -120,7 +140,12 @@
     "title": "Tracking UTM de formularios HubSpot",
     "role": "Desarrollador único",
     "summary": "Una librería ligera de JavaScript para capturar parámetros UTM y atribución de formularios de HubSpot.",
-    "tech": ["JavaScript", "HubSpot", "Marketing", "Forms"],
+    "tech": [
+      "JavaScript",
+      "HubSpot",
+      "Marketing",
+      "Forms"
+    ],
     "accent": "📝",
     "repoAccess": "public",
     "repoUrl": "https://github.com/MAR-GUEZ/hubspot-utm-form-tracking",
@@ -131,7 +156,12 @@
     "title": "Zigru",
     "role": "Arquitecto y desarrollador principal",
     "summary": "Una plataforma ERP SaaS para artistas, con herramientas de negocio y gestión.",
-    "tech": ["Django", "Next.js", "GCP", "Payment Gateways"],
+    "tech": [
+      "Django",
+      "Next.js",
+      "GCP",
+      "Payment Gateways"
+    ],
     "accent": "🎨",
     "repoAccess": "private",
     "demoUrl": "https://zigru.com",

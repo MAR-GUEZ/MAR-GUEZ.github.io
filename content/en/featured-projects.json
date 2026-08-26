@@ -3,7 +3,7 @@
     "id": "sage",
     "title": "SAGE AI Assistant",
     "role": "Lead Architect — architecture and UX/UI design",
-    "summary": "SAGE is a AI marketing analyst that helps with marketing strategy, content creation, and more.",
+    "summary": "SAGE is an AI marketing analyst that helps with marketing strategy, content creation, and more — powered by the company's central source of truth, part of an organization-wide AI transformation.",
     "tech": [
       "Python",
       "FastAPI",
@@ -24,7 +24,11 @@
     "title": "SportCourt Websites",
     "role": "Theme development, ACF field design, and rollout support for partner sites",
     "summary": "WordPress Theme for use the SportCourt partner sites, implemented on over 50 partners worldwide.",
-    "tech": ["WordPress", "ACF Pro", "PHP"],
+    "tech": [
+      "WordPress",
+      "ACF Pro",
+      "PHP"
+    ],
     "accent": "🏀",
     "repoAccess": "private",
     "repoUrl": "https://github.com/logicalmediagroup/Sportcourt-Partner-Theme",
@@ -54,7 +58,12 @@
     "title": "Hilco Real Estate Sales",
     "role": "Migration lead",
     "summary": "Managed a complex migration from a custom CMS to a mixed WordPress-Buildout solution involving a reverse proxy setup, ensuring minimal downtime and seamless transition.",
-    "tech": ["WordPress", "Buildout", "Reverse Proxy", "CMS Migration"],
+    "tech": [
+      "WordPress",
+      "Buildout",
+      "Reverse Proxy",
+      "CMS Migration"
+    ],
     "accent": "🏠",
     "repoAccess": "private"
   },
@@ -63,7 +72,13 @@
     "title": "Fastwyre CRM-HubSpot Sync",
     "role": "Solo developer",
     "summary": "Built a custom API middleware to sync data between Crowdfiber CRM and HubSpot, streamlining lead and customer data flows.",
-    "tech": ["API", "HubSpot", "Crowdfiber", "CRM", "Middleware"],
+    "tech": [
+      "API",
+      "HubSpot",
+      "Crowdfiber",
+      "CRM",
+      "Middleware"
+    ],
     "accent": "🔗",
     "repoAccess": "private"
   },
@@ -72,7 +87,12 @@
     "title": "Kipling & Clark Website Rebuild",
     "role": "Development team lead",
     "summary": "Led the development team in rebuilding the site using ACF, Bootstrap, and a custom WordPress theme.",
-    "tech": ["WordPress", "ACF", "Bootstrap", "PHP"],
+    "tech": [
+      "WordPress",
+      "ACF",
+      "Bootstrap",
+      "PHP"
+    ],
     "accent": "🏗️",
     "repoAccess": "private",
     "demoUrl": "https://kiplingandclark.com/",
@@ -120,7 +140,12 @@
     "title": "HubSpot UTM Form Tracking",
     "role": "Solo developer",
     "summary": "A lightweight JavaScript library for capturing UTM parameters and form attribution for HubSpot forms.",
-    "tech": ["JavaScript", "HubSpot", "Marketing", "Forms"],
+    "tech": [
+      "JavaScript",
+      "HubSpot",
+      "Marketing",
+      "Forms"
+    ],
     "accent": "📝",
     "repoAccess": "public",
     "repoUrl": "https://github.com/MAR-GUEZ/hubspot-utm-form-tracking",
@@ -131,7 +156,12 @@
     "title": "Zigru",
     "role": "Lead architect and developer",
     "summary": "A SaaS ERP platform for artists, providing core business tools and management features.",
-    "tech": ["Django", "Next.js", "GCP", "Payment Gateways"],
+    "tech": [
+      "Django",
+      "Next.js",
+      "GCP",
+      "Payment Gateways"
+    ],
     "accent": "🎨",
     "repoAccess": "private",
     "demoUrl": "https://zigru.com",

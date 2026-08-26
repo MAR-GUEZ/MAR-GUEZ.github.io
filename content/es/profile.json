@@ -2,12 +2,12 @@
   "githubUsername": "MAR-GUEZ",
   "name": "Mauricio Rodríguez",
   "tagline": "Director de Soluciones Tecnológicas",
-  "intro": "Líder tecnológico con 20 años de experiencia y exfundador de agencia, especializado en unir la estrategia de negocio de alto nivel con la ejecución técnica. Actualmente me desempeño como Director de Soluciones Tecnológicas en Logical Media Group, una agencia de marketing digital con sede en Chicago, donde lidero el equipo de tecnología y trabajo directamente con el CEO como enlace principal entre la alta dirección y los equipos de desarrollo. Me enfoco en arquitecturar ecosistemas digitales escalables y flujos impulsados por IA que convierten la visión ejecutiva en realidad técnica de alto rendimiento.",
+  "intro": "Experto en transformación de IA para SaaS B2B y agencias digitales — convierto servicios en productos. Líder tecnológico con 20 años de experiencia y exfundador de agencia, actualmente me desempeño como Director de Soluciones Tecnológicas en Logical Media Group, una agencia de marketing digital con sede en Chicago, donde lidero el equipo de tecnología y trabajo directamente con el CEO como enlace principal entre la alta dirección y los equipos de desarrollo. Lideré la transformación de IA de la compañía, diseñando la fuente central de verdad que impulsa la herramienta de análisis SAGE, los dashboards de la empresa y una experiencia UX interactiva — convirtiendo los servicios de la agencia en ofertas escalables impulsadas por IA.",
   "about": [
-    "Mi trayectoria se define por una combinación poco común de liderazgo emprendedor y profundidad técnica. Tras 13 años como fundador y CEO de una agencia técnica multidisciplinaria, desarrollé una comprensión a nivel de dueño de cómo la tecnología debe impulsar el ROI y la escalabilidad. En mi rol actual como Director de Soluciones Tecnológicas en Logical Media Group, lidero el equipo de tecnología y actúo como traductor estratégico: aseguro que los objetivos de negocio se interpreten con precisión en código sólido y a prueba de futuro. Ya sea diseñando middleware en Python, optimizando entornos HubSpot, desplegando soluciones de IA como SAGE y Harry, o liderando migraciones e integraciones complejas, mi meta siempre es construir roadmaps técnicos alineados con el crecimiento de la organización.",
+    "Mi trayectoria se define por una combinación poco común de liderazgo emprendedor y profundidad técnica. Tras 13 años como fundador y CEO de Ziggurat Agencia, una agencia técnica multidisciplinaria con clientes como la Filarmónica de Medellín, desarrollé una comprensión a nivel de dueño de cómo la tecnología debe impulsar el ROI y la escalabilidad. En mi rol actual como Director de Soluciones Tecnológicas en Logical Media Group, lidero el equipo de tecnología y actúo como traductor estratégico. Lideré la transformación de IA de la compañía: diseñé la fuente central de verdad que impulsa la herramienta de análisis SAGE, los dashboards y una experiencia UX interactiva, y convertí servicios de la agencia en productos impulsados por IA como SAGE y Harry.",
     "Este portafolio lista proyectos y repositorios públicos en los que trabajo."
   ],
-  "contact": "Abierto a conversaciones sobre MarTech, integraciones y operaciones técnicas. Y si te gusta el blues, toco en vivo todos los viernes por la noche en el pub local. ¡Me encantaría verte ahí!",
+  "contact": "Abierto a conversaciones sobre transformación con IA, MarTech, integraciones y operaciones técnicas. Y si te gusta el Blues, toco en vivo todos los viernes en el pub local. ¡Me encantaría verte por ahí!",
   "links": [
     {
       "label": "LinkedIn",
@@ -28,70 +28,172 @@
     {
       "heading": "IA",
       "items": [
-        { "label": "Gemini", "icon": "google" },
-        { "label": "Perplexity", "icon": "perplexity" },
-        { "label": "Claude Code", "icon": "anthropic" },
-        { "label": "OpenClaw", "emoji": "🦞" },
-        { "label": "MCP", "fallback": "MCP" }
+        {
+          "label": "Gemini",
+          "icon": "google"
+        },
+        {
+          "label": "Perplexity",
+          "icon": "perplexity"
+        },
+        {
+          "label": "Claude Code",
+          "icon": "anthropic"
+        },
+        {
+          "label": "OpenClaw",
+          "emoji": "🦞"
+        },
+        {
+          "label": "MCP",
+          "fallback": "MCP"
+        }
       ]
     },
     {
       "heading": "Diseño",
       "items": [
-        { "label": "Figma", "icon": "figma" },
-        { "label": "Adobe Creative Cloud", "icon": "adobecreativecloud" }
+        {
+          "label": "Figma",
+          "icon": "figma"
+        },
+        {
+          "label": "Adobe Creative Cloud",
+          "icon": "adobecreativecloud"
+        }
       ]
     },
     {
       "heading": "CMS, CRM y plataformas",
       "items": [
-        { "label": "WordPress", "icon": "wordpress" },
-        { "label": "Desarrollador certificado HubSpot", "icon": "hubspot" },
-        { "label": "Perfex CRM", "fallback": "Px" },
-        { "label": "GoHighLevel (GHL)", "fallback": "GHL" },
-        { "label": "Salesforce", "icon": "salesforce" }
+        {
+          "label": "WordPress",
+          "icon": "wordpress"
+        },
+        {
+          "label": "Desarrollador certificado HubSpot",
+          "icon": "hubspot"
+        },
+        {
+          "label": "Perfex CRM",
+          "fallback": "Px"
+        },
+        {
+          "label": "GoHighLevel (GHL)",
+          "fallback": "GHL"
+        },
+        {
+          "label": "Salesforce",
+          "icon": "salesforce"
+        }
       ]
     },
     {
       "heading": "Web y frontend",
       "items": [
-        { "label": "HTML", "icon": "html5" },
-        { "label": "CSS", "icon": "css3" },
-        { "label": "JavaScript", "icon": "javascript" },
-        { "label": "Tailwind CSS", "icon": "tailwindcss" },
-        { "label": "Bootstrap", "icon": "bootstrap" },
-        { "label": "Laravel Blade", "fallback": "Blade" },
-        { "label": "Next.js", "icon": "nextdotjs" },
-        { "label": "Astro", "icon": "astro" }
+        {
+          "label": "HTML",
+          "icon": "html5"
+        },
+        {
+          "label": "CSS",
+          "icon": "css3"
+        },
+        {
+          "label": "JavaScript",
+          "icon": "javascript"
+        },
+        {
+          "label": "Tailwind CSS",
+          "icon": "tailwindcss"
+        },
+        {
+          "label": "Bootstrap",
+          "icon": "bootstrap"
+        },
+        {
+          "label": "Laravel Blade",
+          "fallback": "Blade"
+        },
+        {
+          "label": "Next.js",
+          "icon": "nextdotjs"
+        },
+        {
+          "label": "Astro",
+          "icon": "astro"
+        }
       ]
     },
     {
       "heading": "Backend",
       "items": [
-        { "label": "Python", "icon": "python" },
-        { "label": "FastAPI", "icon": "fastapi" },
-        { "label": "Django", "icon": "django" },
-        { "label": "Flask", "icon": "flask" },
-        { "label": "LangChain", "icon": "langchain" },
-        { "label": "TypeScript", "icon": "typescript" }
+        {
+          "label": "Python",
+          "icon": "python"
+        },
+        {
+          "label": "FastAPI",
+          "icon": "fastapi"
+        },
+        {
+          "label": "Django",
+          "icon": "django"
+        },
+        {
+          "label": "Flask",
+          "icon": "flask"
+        },
+        {
+          "label": "LangChain",
+          "icon": "langchain"
+        },
+        {
+          "label": "TypeScript",
+          "icon": "typescript"
+        }
       ]
     },
     {
       "heading": "Datos y bases de datos",
       "items": [
-        { "label": "SQL", "fallback": "SQL" },
-        { "label": "MySQL", "icon": "mysql" },
-        { "label": "PostgreSQL", "icon": "postgresql" },
-        { "label": "BigQuery", "icon": "bigquery" },
-        { "label": "Snowflake", "icon": "snowflake" }
+        {
+          "label": "SQL",
+          "fallback": "SQL"
+        },
+        {
+          "label": "MySQL",
+          "icon": "mysql"
+        },
+        {
+          "label": "PostgreSQL",
+          "icon": "postgresql"
+        },
+        {
+          "label": "BigQuery",
+          "icon": "bigquery"
+        },
+        {
+          "label": "Snowflake",
+          "icon": "snowflake"
+        }
       ]
     },
     {
       "heading": "Productividad y gestión",
       "items": [
-        { "label": "Asana", "icon": "asana" },
-        { "label": "Notion", "icon": "notion" },
-        { "label": "Monday.com", "fallback": "Mo" }
+        {
+          "label": "Asana",
+          "icon": "asana"
+        },
+        {
+          "label": "Notion",
+          "icon": "notion"
+        },
+        {
+          "label": "Monday.com",
+          "fallback": "Mo"
+        }
       ]
     },
     {
@@ -101,7 +203,10 @@
           "label": "Google Cloud — Arquitecto profesional de la nube",
           "icon": "googlecloud"
         },
-        { "label": "AWS", "icon": "amazonwebservices" }
+        {
+          "label": "AWS",
+          "icon": "amazonwebservices"
+        }
       ]
     }
   ]
