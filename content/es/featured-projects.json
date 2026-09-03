@@ -20,6 +20,21 @@
     "githubRepo": "logicalmediagroup/SAGE-AI-Assistant"
   },
   {
+    "id": "vibe-editor",
+    "title": "Vibe Editor",
+    "role": "Arquitecto y líder técnico",
+    "summary": "Un editor de lenguaje natural para sitios web: crea y edita landing pages y sitios completos directamente con prompts — estilo Lovable, pero enfocado en marketing y SEO. El entorno de edición en vivo de cada usuario se orquesta con Kubernetes sobre máquinas virtuales. En producción para LMG y clientes como Consea y Trust2Connect.",
+    "tech": [
+      "Kubernetes",
+      "Contenedores / VMs",
+      "LLMs",
+      "Edición por lenguaje natural",
+      "Marketing y SEO"
+    ],
+    "accent": "✨",
+    "repoAccess": "none"
+  },
+  {
     "id": "SportCourt-Website",
     "title": "Sitios web SportCourt",
     "role": "Desarrollo de tema, diseño de campos ACF y soporte de despliegue para sitios de partners",
